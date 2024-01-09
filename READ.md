@@ -1,4 +1,4 @@
-#code
+# code
 ![test](https://github.com/kit59/code/actions/workflows/test.yml/badge.svg)
 
 ## Install
