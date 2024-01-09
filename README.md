@@ -1,7 +1,9 @@
 # code
 ![test](https://github.com/kit59/code/actions/workflows/test.yml/badge.svg)
 
-2023年度後期のロボットシステム学の課題３用のリポジトリ。入力された数値の半径の円の面積を計算するコマンドであるcircle.pyがある。
+2023年度後期のロボットシステム学の課題３用のリポジトリ。
+
+入力された数値の半径の円の面積を計算するコマンドであるcircle.pyがある。
 
 ## Install
 下記を実行することでリポジトリがクローンされる。
