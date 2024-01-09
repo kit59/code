@@ -6,7 +6,11 @@ import math
 import fileinput
 
 # 標準入力から1つの数値を読み取る
-d = float(next(fileinput.input()))
+try:
+    d = float(next(fileinput.input()))
+except StopIteration:
+    print("Error: No input provided.")
+    exit(1)
 
 # 円の面積を計算
 area = math.pi * d * d
