@@ -2,13 +2,14 @@
 ![test](https://github.com/kit59/code/actions/workflows/test.yml/badge.svg)
 
 ## Install
-下記のコマンドでインストールが可能。
+下記を実行することでリポジトリがクローンされる。
 ```
-git clone
+git clone https://github.com/kit59/code.git
 ```
 
 ## 必要なソフトウェア
 * Python
+  * テスト済み: 3.7～3.10
 
 ## テスト環境
 * Ubuntu 22.04 on Windows
