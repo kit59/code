@@ -3,22 +3,32 @@
 # SPDX-License-Identifier: BSD-3-Claunse
 
 ng () {
-	echo NG at Line $1
-	res=1
+  echo "NG at Line $1"
+  res=1
 }
 
 res=0
 
-out=$(seq 6 3 | ./Division.py)
-[ "${out}" = 2 ] || ng ${LINENO}
+# テストケース1
+out=$(echo -e "10\n3" | python3 your_python_program.py)
+[ "${out}" = "10個のきびだんごを3人で分けると、一人あたり3個で、1個余ります" ] || ng ${LINENO}
 
-out=$(echo あ | ./Division.py)
-[ "$?" = 1 ]      || ng ${LINENO}
+# テストケース2
+out=$(echo -e "あ\n3" | python3 your_python_program.py)
+[ "$?" = 1 ] || ng ${LINENO}
+
+# テストケース3
+out=$(echo -e "\n3" | python3 your_python_program.py)
+[ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo | ./Division.py)
-[ "$?" = 1 ]      || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
+# テストケース4
+out=$(echo -e "15\n0" | python3 your_python_program.py)
+[ "$?" = 1 ] || ng ${LINENO}
 
-[ "$res" = 0 ] && echo OK
+# テストケース5
+out=$(echo -e "15\n3" | python3 your_python_program.py)
+[ "${out}" = "15個のきびだんごを3人で分けると、一人あたり5.0個で、0.0個余ります" ] || ng ${LINENO}
+
+[ "$res" = 0 ] && echo "OK"
 exit $res
