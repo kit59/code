@@ -9,8 +9,8 @@ ng () {
 
 res=0
 
-out=$(seq 5 | ./Division.py)
-[ "${out}" = 15 ] || ng ${LINENO}
+out=$(seq 6 3 | ./Division.py)
+[ "${out}" = 2 ] || ng ${LINENO}
 
 out=$(echo あ | ./Division.py)
 [ "$?" = 1 ]      || ng ${LINENO}
