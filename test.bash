@@ -9,10 +9,9 @@ ng () {
 
 res=0
 
-out=$(echo 8 | python3 array.py)
+out=$(echo 8 | python3 array.py | grep "^和:")
 
 [ "${out}" = "和: 15.999999985098839" ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo "OK"
 exit $res
-
