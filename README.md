@@ -27,6 +27,7 @@ $ echo 8 | python3 circle.py
 
 ## テスト環境
 * Ubuntu latest on Windows
+
 ここでの Ubuntu latest はGitHub Actionsで提供されているUbuntu環境の最新版を指します。
 
 ## ライセンスについて 
