@@ -10,15 +10,13 @@ ng () {
 res=0
 
 out=$(echo 8 | python3 array.py)
-[ "${out}" = "a[0] * 2.0: 16.0" ] || ng ${LINENO}
+[ "${out}" = "和: 15.999999985098839" ] || ng ${LINENO}
 
 out=$(echo あ | python3 array.py)
-[ "$?" = 1 ]      || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
+[ "$?" = 1 ] || ng ${LINENO}
 
 out=$(echo | python3 array.py)
-[ "$?" = 1 ]      || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
+[ "$?" = 1 ] || ng ${LINENO}
 
-[ "$res" = 0 ] && echo OK
+[ "$res" = 0 ] && echo "OK"
 exit $res

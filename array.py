@@ -1,3 +1,7 @@
+#!/bin/python3
+# SPDX-FileCopyrightText: 2023 kaito Akiyama
+# SPDX-License-Identifier: BSD-3-Claunse
+
 NUM = 30
 
 try:
@@ -18,4 +22,3 @@ for i in range(1, NUM):
 m = sum(a)
 print(f"和: {m}")
 print(f"a[0] * 2.0: {n * 2}")
-
