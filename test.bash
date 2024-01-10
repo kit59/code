@@ -9,14 +9,14 @@ ng () {
 
 res=0
 
-out=$(echo 6 | python3 circle.py)
-[ "${out}" = "半径6.0の円の面積は113.09733552923255" ] || ng ${LINENO}
+out=$(echo 8 | python3 array.py)
+[ "${out}" = "a[0] * 2.0: 16.0" ] || ng ${LINENO}
 
-out=$(echo あ | python3 circle.py)
+out=$(echo あ | python3 array.py)
 [ "$?" = 1 ]      || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo | python3 circle.py)
+out=$(echo | python3 array.py)
 [ "$?" = 1 ]      || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
