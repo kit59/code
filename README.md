@@ -26,9 +26,9 @@ $ echo 8 | python3 circle.py
   * テスト済み: 3.7～3.10
 
 ## テスト環境
-* Ubuntu latest on Windows
-
-ここでの Ubuntu latest はGitHub Actionsで提供されているUbuntu環境の最新版を指します。
+* Ubuntu 20.04 on Windows
+* Python
+  * テスト済み: 3.7～3.10
 
 ## ライセンスについて 
 * このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます
