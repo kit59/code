@@ -9,13 +9,10 @@ ng () {
 
 res=0
 
-python3 array.py > output.txt
-
-out=$(cat output.txt)
+out=$(echo 8 | python3 array.py)
 
 [ "${out}" = "和: 15.999999985098839" ] || ng ${LINENO}
 
-rm output.txt
-
 [ "$res" = 0 ] && echo "OK"
 exit $res
+
