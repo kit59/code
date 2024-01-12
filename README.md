@@ -1,5 +1,5 @@
-# code
-![test](https://github.com/kit59/code/actions/workflows/test.yml/badge.svg)
+# compare
+![test](https://github.com/kit59/compare/actions/workflows/test.yml/badge.svg)
 
 2023年度後期のロボットシステム学の課題３用のリポジトリ。
 
@@ -8,7 +8,7 @@
 ## Install
 下記を実行することでリポジトリがクローンされます。
 ```
-git clone https://github.com/kit59/code.git
+git clone https://github.com/kit59/compare.git
 ```
 
 ## arrayコマンド
