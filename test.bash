@@ -12,9 +12,9 @@ res=0
 out=$(echo 8 | python3 array | grep "^和:")
 [ "${out}" = "和: 15.999999985098839" ] || ng ${LINENO}
 
-out=$(echo "invalid" | python3 array 2>&1)
+error_out=$(echo "invalid" | python3 array.py 2>&1)
 [ "$?" = 1 ] || ng ${LINENO}
-[ "${out}" = "Error: Invalid input provided." ] || ng ${LINENO}
+[ "${error_out}" = "実数を入力: Error: Invalid input provided." ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo "OK"
 exit $res
